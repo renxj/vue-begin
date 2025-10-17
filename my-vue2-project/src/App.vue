@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <!-- 登录页不使用 Dashboard 布局，仅渲染路由视图 -->
+    <router-view v-if="$route && $route.name === 'Login'" />
+    <!-- 其他页面使用 Dashboard 布局 -->
+    <Dashboard v-else />
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import Dashboard from '@/views/Dashboard.vue'
+
+export default {
+  name: 'AppView',
+  components: {
+    Dashboard
+  }
+}
+</script>
 
 <style>
 #app {
@@ -15,6 +26,16 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+/* 全局样式 - 重置body margin */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  padding-left:0;
 }
 
 nav {

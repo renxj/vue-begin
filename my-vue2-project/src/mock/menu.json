@@ -1,0 +1,75 @@
+{
+  "menu": [
+    {
+      "type": "item",
+      "index": "/dashboard",
+      "icon": "el-icon-data-analysis",
+      "title": "仪表盘"
+    },
+    {
+      "type": "submenu",
+      "index": "user",
+      "icon": "el-icon-user-solid",
+      "title": "用户管理",
+      "roles": ["admin"],
+      "children": [
+        { "type": "item", "index": "/users", "title": "用户列表", "roles": ["admin"] },
+        { "type": "item", "index": "/users/roles", "title": "角色管理", "roles": ["admin"] },
+        { "type": "item", "index": "/users/permissions", "title": "权限管理", "roles": ["admin"] }
+      ]
+    },
+    {
+      "type": "submenu",
+      "index": "content",
+      "icon": "el-icon-document",
+      "title": "内容管理",
+      "roles": ["admin", "editor"],
+      "children": [
+        {
+          "type": "submenu",
+          "index": "articles",
+          "title": "文章管理",
+          "roles": ["admin", "editor"],
+          "children": [
+            { "type": "item", "index": "/content/articles/list", "title": "文章列表", "roles": ["admin", "editor"] },
+            { "type": "item", "index": "/content/articles/create", "title": "创建文章", "roles": ["admin", "editor"] },
+            { "type": "item", "index": "/content/articles/categories", "title": "文章分类", "roles": ["admin", "editor"] }
+          ]
+        },
+        { "type": "item", "index": "/content/media", "title": "媒体库", "roles": ["admin", "editor"] },
+        { "type": "item", "index": "/content/comments", "title": "评论管理", "roles": ["admin"] }
+      ]
+    },
+    {
+      "type": "submenu",
+      "index": "analytics",
+      "icon": "el-icon-s-marketing",
+      "title": "数据分析",
+      "roles": ["admin", "editor"],
+      "children": [
+        { "type": "item", "index": "/analytics/overview", "title": "数据概览", "roles": ["admin", "editor"] },
+        { "type": "item", "index": "/analytics/reports", "title": "报表中心", "roles": ["admin", "editor"] },
+        { "type": "item", "index": "/analytics/charts", "title": "图表分析", "roles": ["admin", "editor"] }
+      ]
+    },
+    {
+      "type": "submenu",
+      "index": "system",
+      "icon": "el-icon-setting",
+      "title": "系统设置",
+      "roles": ["admin"],
+      "children": [
+        { "type": "item", "index": "/system/config", "title": "基础配置", "roles": ["admin"] },
+        { "type": "item", "index": "/system/logs", "title": "系统日志", "roles": ["admin"] },
+        { "type": "item", "index": "/system/backup", "title": "数据备份", "roles": ["admin"] }
+      ]
+    },
+    {
+      "type": "item",
+      "index": "/profile",
+      "icon": "el-icon-user",
+      "title": "个人资料",
+      "roles": ["admin", "editor", "viewer"]
+    }
+  ]
+}

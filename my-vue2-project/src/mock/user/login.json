@@ -1,0 +1,19 @@
+{
+    "code": 200,
+    "message": "登录成功",
+    "data": {
+      "userId": "123456",
+      "username": "zhangsan",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      "expiresIn": 7200,
+      "user": {
+        "name": "张三",
+        "avatar": "",
+        "email": "zhangsan@example.com",
+        "phone": "138****1234",
+        "roles": [""]
+      }
+    },
+    "timestamp": "2024-01-15 10:30:00"
+  }
