@@ -63,7 +63,7 @@ router.beforeEach((to, from, next) => {
     if (!isAuthenticated) {
       // 如果未认证，重定向到登录页
       next({
-        path: '/login',
+        path: '/login', 
         query: { redirect: to.fullPath } // 保存目标路径以便登录后重定向
       })
     } else {

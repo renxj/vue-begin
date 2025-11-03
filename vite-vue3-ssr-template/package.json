@@ -1,0 +1,21 @@
+
+{
+  "type": "module",
+  "name": "vite-vue3-ssr",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server/server.js",
+    "build": "vite build",
+    "serve": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pinia": "^2.2.5",
+    "vue": "^3.5.0",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-vue": "^5.0.0"
+  }
+}
